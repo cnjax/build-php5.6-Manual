@@ -1,0 +1,14 @@
+wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-6.repo
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
+yum install -y http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+yum install libxml2-devel openssl-devel bzip2-devel curl-devel libjpeg-devel libpng-devel freetype-devel gmp-devel mysql-devel ncurses-devel unixODBC-devel net-snmp-devel mhash-devel libc-client-devel libicu-devel gcc postgresql-devel aspell-devel libxslt-devel gcc-c++ openldap-devel yum-priorities  -yyum install mysql-libs
+
+yum install libzip-devel libmysqlclient libXpm-devel yum-utils libzip-devel
+
+yum-builddep  php-5.4.16-42.el7.src.rpm  --nogpgcheck
+
+install gd2
+wget https://bitbucket.org/libgd/gd-libgd/downloads/libgd-2.1.0.tar.gz
+./configure --prefix=/usr/ --with-png=/usr --with-jpeg=/usr --with-freetype=/usr --with-fontconfi
+g=/usr/
+mv /usr/lib/libgd* /usr/lib64
